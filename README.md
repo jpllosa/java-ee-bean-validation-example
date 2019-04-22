@@ -1,8 +1,5 @@
-jboss-javaee-webapp: Assortment of technologies including Arquillian
+A Java EE Bean Validation Example based on jboss-javaee-webapp: Red Hat Central
 ========================
-Author: Pete Muir
-Level: Intermediate
-Technologies: CDI, JSF, JPA, EJB, JPA, JAX-RS, BV
 Summary: An example that incorporates multiple technologies
 Target Project: WildFly
 Source: <https://github.com/wildfly/quickstart/>
@@ -12,9 +9,9 @@ What is it?
 
 This is your project! It is a sample, deployable Maven 3 project to help you get your foot in the door developing with Java EE 7 on JBoss WildFly.
 
-This project is setup to allow you to create a compliant Java EE 7 application using JSF 2.2, CDI 1.1, EJB 3.3, JPA 2.1 and Bean Validation 1.1. It includes a persistence unit and some sample persistence and transaction code to introduce you to database access in enterprise Java.
+This project is setup to allow you to create a compliant Java EE 7 application using JSF 2.2, CDI 1.1, EJB 3.3, JPA 2.1 and Bean Validation 1.1.
 
-There is a tutorial for this quickstart in the [Getting Started Developing Applications Guide](https://github.com/wildfly/quickstart/guide/jboss-javaee-webapp/).
+There is a tutorial for this example in [Java Code Geeks](https://examples.javacodegeeks.com/author/joel-llosa/).
 
 System requirements
 -------------------
@@ -27,7 +24,7 @@ The application this project produces is designed to be run on JBoss WildFly.
 Configure Maven
 ---------------
 
-If you have not yet done so, you must [Configure Maven](https://github.com/jboss-developer/jboss-developer-shared-resources/blob/master/guides/CONFIGURE_MAVEN.md) before testing the quickstarts.
+If you have not yet done so, you must [Configure Maven](https://github.com/jboss-developer/jboss-developer-shared-resources/blob/master/guides/CONFIGURE_MAVEN.md).
 
 
 Start JBoss WildFly with the Web Profile
@@ -57,7 +54,7 @@ _NOTE: The following build command assumes you have configured your Maven user s
 Access the application 
 ---------------------
 
-The application will be running at the following URL: <http://localhost:8080/jboss-javaee-webapp/>.
+The application will be running at the following URL: <http://localhost:8080/java-ee-bean-validation-example>.
 
 
 Undeploy the Archive
@@ -68,21 +65,6 @@ Undeploy the Archive
 3. When you are finished testing, type this command to undeploy the archive:
 
         mvn wildfly:undeploy
-
-
-Run the Arquillian Tests 
--------------------------
-
-This quickstart provides Arquillian tests. By default, these tests are configured to be skipped as Arquillian tests require the use of a container. 
-
-_NOTE: The following commands assume you have configured your Maven user settings. If you have not, you must include Maven setting arguments on the command line. See [Run the Arquillian Tests](https://github.com/jboss-developer/jboss-developer-shared-resources/blob/master/guides/RUN_ARQUILLIAN_TESTS.md) for complete instructions and additional options._
-
-1. Make sure you have started the JBoss Server as described above.
-2. Open a command line and navigate to the root directory of this quickstart.
-3. Type the following command to run the test goal with the following profile activated:
-
-        mvn clean test -Parq-wildfly-remote
-
 
 Run the Quickstart in JBoss Developer Studio or Eclipse
 -------------------------------------
