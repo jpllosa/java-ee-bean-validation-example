@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    template="/WEB-INF/templates/default.xhtml">
+    <ui:define name="content">
+        <h1>Welcome to WildFly!</h1>
+
+        <div>
+            <p>You have successfully deployed a Java EE 7 Enterprise
+                Application.</p>
+            <h3>Your application can run on:</h3>
+            <img src="resources/gfx/wildfly_400x130.jpg" />
+        </div>
+
+        <h:form id="reg">
+            <h2>Member Registration</h2>
+            <p>Enforces annotation-based constraints defined on the backing bean.</p>
+            <h:panelGrid columns="3" columnClasses="titleCell">
+                <h:outputLabel for="name" value="Name:" />
+                <h:inputText id="name" value="#{indexBacking.name}" />
+                <h:message for="name" errorClass="invalid" />
+
+                <h:outputLabel for="email" value="Personal Email:" />
+                <h:inputText id="email" value="#{indexBacking.email}" />
+                <h:message for="email" errorClass="invalid" />
+
+                <h:outputLabel for="phoneNumber" value="Phone #:" />
+                <h:inputText id="phoneNumber"
+                    value="#{indexBacking.phoneNumber}" />
+                <h:message for="phoneNumber" errorClass="invalid" />
+                
+                <h:outputLabel for="title" value="Title:" />
+                <h:inputText id="title" value="#{indexBacking.title}" />
+                <h:message for="title" errorClass="invalid" />
+                
+                <h:outputLabel for="companyEmail" value="Company Email:" />
+                <h:inputText id="companyEmail" value="#{indexBacking.companyEmail}" />
+                <h:message for="companyEmail" errorClass="invalid" />
+            </h:panelGrid>
+
+            <p>
+                <h:panelGrid columns="2">
+                    <h:commandButton id="register"
+                        action="#{indexBacking.register}"
+                        value="Register" styleClass="register" />
+                    <h:messages styleClass="messages"
+                        errorClass="invalid" infoClass="valid"
+                        warnClass="warning" globalOnly="true" />
+                </h:panelGrid>
+            </p>
+        </h:form>
+        
+    </ui:define>
+</ui:composition>
